@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio Website</title>
+    <link rel="stylesheet" href="style(CSS).css">
+    <script src="https://kit.fontawesome.com/a5b30a9a83.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="portfolio_logo_new.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science Engineer</p>
+            <h1>Hi, I'm<span> Prabhas adapa</span></h1>
+        </div>
+        <br>
+        <br>
+        <div class="newslatter">
+            <form action="" method="post">
+                <input type="email" name="email" id="mail" placeholder="Enter Your Email address">
+                <input type="submit" name="submit" value="Save">
+            </form>
+        </div>
+          
+    
+    </div>
+</div>
+<!-- -------------about-------------- -->
+<div id="about">
+    
+    <div class="container">
+        <div class="row">
+            <div class="about-img">
+                <img src="me1.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a passionate undergraduate student pursuing Computer Science and Engineering, currently seeking an Internship opportunity to consistently improve my technical skills.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>C,C++,Java,Python</li>
+                        <li><span>Courses</span><br>OOPS,Data Structures, Design Analysis and Algorithms</li>
+                        <li><span>Non-technical</span><br>Time Management, Leadership, Team Coordination, Problem Solving and Critical thinking.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Jul 2022-Present</span><br>Crop pest classification based on deep CNN and transfer learning
+                            Importance of privacy preservation for image processing and
+                            video anonymization
+                            Research on pre trained CNN models(transfer learning)</li>
+                        <li><span>May 2022 - Sept 2022</span><br> Intenship- YBI Crash course on AI/ML</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020 - 2024</span><br>SRM University, Andhra Pradesh</li>
+                        <li><span>2018 - 2020</span><br>Sri Chaitanya Junior College</li>
+                        <li><span>2017 - 2018</span><br>Sri Chaitanya School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -----------services-------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-spider"></i>
+                <h2>Neural Networks</h2>
+                <p>A convolutional neural network (CNN or ConvNet) is a network architecture for deep learning that learns directly from data. CNNs are particularly useful for finding patterns in images to recognize objects, classes, and categories. They can also be quite effective for classifying audio, time-series, and signal data.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>AI</h2>
+                <p>Artificial intelligence leverages computers and machines to mimic the problem-solving and decision-making capabilities of the human mind.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>ML</h2>
+                <p>Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+
+<!--portfolio section design-->
+<section class="portfolio" id="portfolio">
+    <h2 class="heading">My <span>Projects</span></h2>
+    <div class="portfolio-container">
+        
+        <div class="portfolio-box">
+            <img src="https://th.bing.com/th/id/OIG.irOjz4OKloO5mR1icHkb?pid=ImgGn" alt="">
+            <div class="portfolio-layer">
+                <h4>Cafe Management System</h4>
+                <p> The aim of this project is to store the data of a Cafe in a database. By storing the data,
+                    it is easier to find the Customer, waiter, order, chef, food items and every detail of the
+                    cafe.</p>
+                <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>    
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="https://th.bing.com/th/id/OIG.t7zQVa04BSZE5fLmPNwE?pid=ImgGn&w=1024&h=1024&rs=1" alt="">
+            <div class="portfolio-layer">
+                <h4>Computer Vision based Video Processing</h4>
+                <p>Object detection plays a vital role in the field of computer vision
+                    because it has a wide range of applications in security, surveillance, and human-
+                    computer interaction</p>
+                <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>   
+            </div>
+        
+        </div>
+        <div class="portfolio-box">
+            <img src="https://th.bing.com/th/id/OIG.jaCFUhUHX5uD0ogtto8x?pid=ImgGn" alt="">
+            <div class="portfolio-layer">
+                <h4>Video Transmission over wifi using socket programming</h4>
+                <p>A Basic java code for transmission of any media from server to client (IP addressing & Port addressing).</p>
+                <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>   
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img src="https://th.bing.com/th/id/OIG.aM8rwCGjbI071XEWbXbM?pid=ImgGn" alt="">
+            <div class="portfolio-layer">
+                <h4>Web Application for Smart Agriculture</h4>
+                <p> The application's user-friendly interface should be accessible remotely from any device with an internet connection,
+                    which will increase efficiency, decrease losses, and improve profitability for farmers and agribusinesses.</p>
+                    <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="https://th.bing.com/th/id/OIG.Q8l8A4gufccdN44vxtDr?pid=ImgGn" alt="">
+            <div class="portfolio-layer">
+                <h4>Path Navigation of Autonomous Agents using A.I</h4>
+                <p>Finding the shortest path from start node to the goal node using the dijkstra's algorithm.</p>
+                <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>   
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="https://th.bing.com/th/id/OIG.TqEGZFMjtdH_DV10l1I0?pid=ImgGn" alt="">
+            <div class="portfolio-layer">
+                <h4>Eigen Values and Eigen Vectors with their applications</h4>
+                <p>Eigenvalues and eigenvectors are only for square matrices.Eigenvectors are by definition nonzero. Eigenvalues may be equal to zero.We do not consider the zero vector to be an eigenvector: since A0=0=λ0 for every scalar λ, the associated eigenvalue would be undefined.</p>
+                <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+    </div>
+</section> 
+
+<!--contact section design-->
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <form action="#" method="post">
+        <div class="contact-left">
+            <h1 class="sub"></h1>
+            <p><i class="far fa-paper-plane"></i>prabhas_adapa@srmap.edu.in</p>
+            <p><i class="fas fa-phone"></i>8121942003</p>
+            <div class="social-icons">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/8121942003"><i class="fab fa-whatsapp"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <div class="input-box">
+                <input type="text" placeholder="Name" name="f_name">
+                <input type="tel" placeholder="Ph no" name="phonenumber">
+            </div>
+            <textarea name="f_message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" name="save" value="Send Message" class="btn">
+        </div>
+
+        
+    </form>
+</section>
+</div>
+</body>
+</html>
